@@ -1,0 +1,22 @@
+import unittest
+from unittest.mock import patch, MagicMock
+from http.client import HTTPResponse
+import urllib
+import json
+
+from url_fetch import fetch_extract_html
+
+
+class TestFetchExtractHtml(unittest.TestCase):
+
+    @patch("urllib.request.urlopen")
+    def test_fetch_extract_html(self, mock_urlopen):
+        mock_reponse = MagicMock()
+        mock_reponse.read.return_value = """ """  #TODO test value
+
+        mock_urlopen.return_value = mock_reponse
+
+        #TODO Complete testing
+
+if __name__ == "__main__":
+    unittest.main()
