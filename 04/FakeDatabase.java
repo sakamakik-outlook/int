@@ -8,7 +8,6 @@ class FakeDatabase {
     }
     private int value = 0;
 
-    // Not thread-safe update method
     public synchronized void update(String name) {
         System.out.println("Thread " + name + ": starting update");
         int localCopy = value;
